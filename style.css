@@ -1,0 +1,95 @@
+:root {
+  --bgm1: #fff;
+  --bgm2: #040114;
+  --bgs1: #0f0c24;
+  --bgs2: #b2edf1;
+  --bgc1: #ffd900;
+  --bgc2: #637475;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bgm1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14.375rem;
+  height: 100vh;
+  transition: 1s;
+}
+
+.body {
+  background-color: var(--bgm2);
+  height: 100vh;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  transition: 1s;
+}
+
+.title2 {
+  color: var(--bgs2);
+}
+
+div {
+  padding: 0.1875rem 0.3125rem;
+  position: relative;
+  background-color: var(--bgs1);
+  height: 2rem;
+  width: 4.5rem;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.div {
+  background-color: var(--bgs2);
+}
+
+div::before {
+  content: '';
+  position: absolute;
+  background-color: var(--bgc1);
+  height: 1.625rem;
+  width: 1.625rem;
+  clip-path: circle();
+  transition: transform 1s;
+  background-image: url(./assets/sun.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.div::before {
+  background-color: var(--bgs1);
+  transition: transform 1s;
+  background-image: url(./assets/moon.svg);
+}
+
+div.changeColor::before {
+  transform: translateX(2.3125rem);
+}
+
+.credits {
+  font-family: 'Roboto', sans-serif;
+  transition: 4.5s;
+  text-transform: uppercase;
+}
+
+.credits2 {
+  color: var(--bgc2);
+  transition: 4.5s;
+}
+
+span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
